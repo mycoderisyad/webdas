@@ -867,6 +867,29 @@ footer {
   .section-title {
     font-size: 2rem;
   }
+
+  .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  font-weight: 500;
+}
+
+.primary-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
 }
 
 @media screen and (max-width: 576px) {
@@ -879,9 +902,10 @@ footer {
   }
 
   .cta-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 
   .projects-container {
     grid-template-columns: 1fr;
