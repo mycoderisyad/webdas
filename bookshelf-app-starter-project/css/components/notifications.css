@@ -1,0 +1,64 @@
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text-color);
+  color: var(--primary-text-color);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 7px;
+  box-shadow: var(--shadow-lg);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  z-index: 1001;
+  animation: notificationSlideUp var(--transition-normal);
+  max-width: 350px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+@keyframes notificationSlideUp {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.notification.fade-out {
+  animation: notificationFadeOutBottom var(--transition-normal);
+}
+
+@keyframes notificationFadeOutBottom {
+  from {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+}
+
+.notification.success {
+  background: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.notification.error {
+  background: var(--danger-color);
+  color: var(--primary-text-color);
+}
+
+.notification.warning {
+  background: var(--warning-color);
+  color: var(--text-color);
+}
+
+.notification.info {
+  background: var(--text-muted);
+  color: var(--primary-text-color);
+}

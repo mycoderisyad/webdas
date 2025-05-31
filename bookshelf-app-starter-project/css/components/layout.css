@@ -1,0 +1,100 @@
+body {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-muted);
+}
+
+header {
+  background: var(--bg-color);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-lg) 0;
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--border-color);
+}
+
+main {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-rows: auto;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+section {
+  background: var(--section-bg);
+  border-radius: 7px;
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+section::before {
+  content: none;
+}
+
+section:hover {
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+section:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 1;
+}
+
+section:nth-child(1) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 1;
+  background: var(--section-bg);
+}
+
+section:nth-child(4) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 1;
+}
+section:nth-child(2) {
+  grid-column: 1 / 4;
+  grid-row: 2 / 2;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  margin-top: var(--spacing-lg);
+}
+
+#incompleteBookList,
+#completeBookList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  max-height: 500px;
+  overflow-y: auto;
+  padding: var(--spacing-xs);
+  background: transparent;
+  border-radius: 0;
+  border: none;
+}
+
+#incompleteBookList::-webkit-scrollbar,
+#completeBookList::-webkit-scrollbar {
+  width: 6px;
+}
+
+#incompleteBookList::-webkit-scrollbar-track,
+#completeBookList::-webkit-scrollbar-track {
+  background: var(--accent-color);
+  border-radius: 7px;
+}
+
+#incompleteBookList::-webkit-scrollbar-thumb,
+#completeBookList::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 7px;
+}
+
+#incompleteBookList::-webkit-scrollbar-thumb:hover,
+#completeBookList::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
+}

@@ -1,0 +1,112 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 7px;
+  font-size: var(--font-xs);
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--transition-fast),
+    border-color var(--transition-fast), color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  min-height: 34px;
+  gap: var(--spacing-xs);
+  letter-spacing: 0.1px;
+  text-transform: none;
+  box-shadow: none;
+  background: transparent;
+  color: var(--text-color);
+}
+
+.btn:hover {
+  border-color: var(--primary-hover);
+  color: var(--primary-hover);
+  background: var(--accent-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:active {
+  box-shadow: none;
+  background: var(--border-color);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--primary-text-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: var(--primary-text-color);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border-color: var(--secondary-button-border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+  color: var(--text-color);
+}
+
+.btn-danger {
+  background: var(--danger-color);
+  color: var(--primary-text-color);
+  border-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+  border-color: var(--danger-hover);
+  color: var(--primary-text-color);
+}
+
+#bookFormSubmit {
+  background: var(--primary-color);
+  color: var(--primary-text-color);
+  border-color: var(--primary-color);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 7px;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  min-height: 40px;
+  text-transform: none;
+  letter-spacing: 0.1px;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+}
+
+#bookFormSubmit:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  box-shadow: var(--shadow-md);
+}
+
+#searchSubmit {
+  background: var(--primary-color);
+  color: var(--primary-text-color);
+  border-color: var(--primary-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 7px;
+  font-size: var(--font-xs);
+  font-weight: 500;
+  min-height: 38px;
+  text-transform: none;
+  letter-spacing: 0.1px;
+  box-shadow: none;
+}
+
+#searchSubmit:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  box-shadow: var(--shadow-sm);
+}
